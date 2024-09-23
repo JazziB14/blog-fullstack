@@ -1,7 +1,7 @@
 import {getPosts} from './posts.js'
 
 const postsEl = document.querySelector('#posts');
-const API_URL = 'https://xtxwmrmjrggeughetccr.supabase.co   /rest/v1'
+const API_URL = 'https://xtxwmrmjrggeughetccr.supabase.co/rest/v1'
 const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh0eHdtcm1qcmdnZXVnaGV0Y2NyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY3NjU2OTAsImV4cCI6MjA0MjM0MTY5MH0.4ZCb7HD6OsV2mp4YVPuxurRbt7w8JAkx5k2fMnLNH2g'
 
 getPosts() .forEach(item => showPostsWebView(item))
