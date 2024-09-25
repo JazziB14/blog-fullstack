@@ -1,11 +1,13 @@
 import {getPosts} from './posts.js'
+import {addPost} from "./posts.js";
 
 const postsEl = document.querySelector('#posts');
+const formEl = document.querySelector('#add-post')
 
 getPosts()
     .then(data => {
-        console.log(data)
-        data.forEach(item => console.log(item))
+        // console.log(data)
+        // data.forEach(item => console.log(item))
         data.forEach(item => showPostsWebView(item))
 
 })
@@ -30,4 +32,25 @@ function showPostsWebView(item = { }) {
     postsEl.appendChild(div);
 }
 
+document.querySelector('#add-post').addEventListener('submit', async function(event){
+    event.preventDefault();
+    // console.log("works")
+    // Get the values from the form
+    const title = document.querySelector('#title').value;
+    console.log(title)
+    const author = document.querySelector('#author').value;
+    console.log(author)
+    const content = document.querySelector('#content').value;
+    console.log(content)
+    // Create an object with this data
+    const newPost = {
+        title,
+        author,
+        content
+    };
+console.log(newPost)
+    // Call your function to add the post
+    const response = await addPost(newPost);
+    console.log(response); // Log the result (either success or error)
+});
 
