@@ -42,15 +42,22 @@ document.querySelector('#add-post').addEventListener('submit', async function(ev
     console.log(author)
     const content = document.querySelector('#content').value;
     console.log(content)
+    const publishedOn = document.querySelector('#published-date').value;
+    console.log(publishedOn)
     // Create an object with this data
     const newPost = {
-        title,
-        author,
-        content
+        title: title,
+        author: author,
+        content: content,
+        publishedOn: publishedOn
     };
-console.log(newPost)
+
+    console.log(newPost)
     // Call your function to add the post
     const response = await addPost(newPost);
     console.log(response); // Log the result (either success or error)
+
 });
+
+
 

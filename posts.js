@@ -41,16 +41,19 @@ export function updatePosts(id, content){
 // Define the async function that adds a post to your Supabase database
 export async function addPost(newPost = {}) {
     try {
-        // Insert the new post into the "f24_postsTable" table
-        const {data, error } = await supabase
-            .from('f24_postsTable')
-            .insert([newPost]); // Supabase expects an array of objects
+    // Insert the new post into the "f24_postsTable" table
+    const {data, error} = await supabase
+        .from('f24_postsTable')
+        .insert(newPost);  // Supabase expects an array of objects
+        console.log(newPost)
 
         if (error) {
-            throw error; // If there's an error, throw it so we can handle it later
+            throw error; // throw error; // If there's an error, throw it so we can handle it later
         }
 
+
         return data; // If successful, return the data (the newly added post)
+
     } catch (error) {
         console.log("Error adding post:", error);
         return {error: error.message }; // Return the error if something goes wrong
