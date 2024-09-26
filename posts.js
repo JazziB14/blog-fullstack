@@ -41,8 +41,8 @@ export function updatePosts(id, content){
 // Define the async function that adds a post to your Supabase database
 export async function addPost(newPost = {}) {
     try {
-    // Insert the new post into the "f24_postsTable" table
-    const {data, error} = await supabase
+        // Insert the new post into the "f24_postsTable" table
+        const {data, error} = await supabase
         .from('f24_postsTable')
         .insert(newPost);  // Supabase expects an array of objects
         console.log(newPost)
