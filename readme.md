@@ -43,4 +43,5 @@ graph TD
     - [ ] When hits "delete" button from each post (frontend)
     - [ ] remove the post from supabase (backend)
     - [ ] refresh the page (frontend)
+    - 
   
