@@ -10,7 +10,7 @@ getPosts()
         // data.forEach(item => console.log(item))
         data.forEach(item => showPostsWebView(item))
 
-})
+    })
 
 function showPostsWebView(item = { }) {
 
@@ -20,16 +20,21 @@ function showPostsWebView(item = { }) {
         <div class="card bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h3 class="card-title">${item['title']}</h3>
-                        <p class="text-gray-600">Published on: ${item['publishedOn']} by ${item['publishedBy']}</p>
+                        <p class="text-gray-600">Published on: ${item['publishedOn']} by ${item['author']}</p>
                         <p>${item['content']}</p>
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Read More</button>
+                           
                         </div>
                     </div>
                 </div>
     `
 
     postsEl.appendChild(div);
+}
+
+function handleDelete() {
+
 }
 
 document.querySelector('#add-post').addEventListener('submit', async function(event){

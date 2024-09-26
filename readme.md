@@ -1,17 +1,46 @@
-Attached with the following: 
--Screenshot 20240924 141319.png: a screenshot of the frontend of my application
--Screenshot 20240924 141245.png: the JS of my application with one of the function and my comments of what I plan to do
+# Blog Builder Project
 
-Goal: when a user submits the posts it submits to supabase
+This project is a comprehensive walkthrough for building a blog using modern web technologies. The frontend is constructed with HTML, styled using TailwindCSS and DaisyUI, and enhanced with JavaScript for interactivity. The backend is powered by Supabase, providing a robust and scalable infrastructure for data management.
 
-Imagine you're a senior developer walking a beginner developer how to approach this problem.
+## Project Overview
 
-Given this, walk me through this code & implementation step-by-step assuming I don't have prior context.
+- Frontend: HTML, TailwindCSS, DaisyUI, JavaScript
+- Backend: Supabase
+- Purpose: Create a fully functional blog with a sleek, responsive design
 
-Here's the steps to follow:
-- First review the screenshots close
-- Understand all the concepts required 
-- Assume I'm a beginner in the language 
-- Include an additional resource(s) that will aid my understanding
-- You write in markdown
+```mermaid
+graph TD
+    User((User))
+    
+    subgraph Frontend
+        HTML[HTML]
+        TailwindCSS[TailwindCSS]
+        DaisyUI[DaisyUI]
+        JavaScript[JavaScript]
+    end
+    
+    subgraph Backend
+        Supabase[(Supabase)]
+    end
+    
+    User -->|Interacts with| HTML
+    HTML -->|Styled by| TailwindCSS
+    TailwindCSS -->|Enhanced by| DaisyUI
+    HTML -->|Dynamic functionality| JavaScript
+    JavaScript <-->|API Requests| Supabase
+    
+    classDef frontend fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef backend fill:#bbf,stroke:#333,stroke-width:2px;
+    class HTML,TailwindCSS,DaisyUI,JavaScript frontend;
+    class Supabase backend;
+```
 
+### Features
+
+- [x] All readers to see all posts
+- [x] All users to add a new post - (TODO v1)
+- [ ] All users to delete a post
+    - [ ] When hits "delete" button from each post (frontend)
+    - [ ] remove the post from supabase (backend)
+    - [ ] refresh the page (frontend)
+  
