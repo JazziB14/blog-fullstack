@@ -44,6 +44,6 @@ graph TD
     - [ ] remove the post from supabase (backend)
     -  [x] **Minimum Viable Solution**, MVS (i.e.: the simplest "correct" thing that solves the problem)  
         - - [ ] Iterate on our MVS, and make it work for real - TODO (v2)
-    - [ ] refresh the page (frontend)
+    - [x] refresh the page (frontend)
   
   

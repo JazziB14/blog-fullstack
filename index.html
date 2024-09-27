@@ -21,7 +21,22 @@
         // for inspiration, see: https://supabase.com/docs/reference/javascript/delete
         // hint: first start with outline how you will solve this problem
         // console.log(`deleting ID: ${postId}`);
-       console.log(deletePost(postId))
+       const confirmDelete =  prompt(`Do you really want to delete Post #${postId}. Enter "y" to delete`)
+
+        console.log(confirmDelete)
+
+        if (confirmDelete === "y") {
+            // do the delete stuff
+            console.log(deletePost(postId))
+
+            alert(`Post #${postId} is now deleted`)
+            window.location.reload()
+        } else {
+            alert("OK. Delete canceled")
+        }
+
+
+
     }
 
 
