@@ -9,6 +9,7 @@ export async function getPosts() {
     let {data, error} = await supabase
         .from('f24_postsTable')
         .select('*')
+
     return data;
 
 }
@@ -26,8 +27,10 @@ export async function getPosts() {
  * @returns {string}
  */
 export function deletePost(id){
-    return `deleting post with ${id}`
+
+return `deleting post with ${id}`
 }
+
 
 /**
  * Updates post with ID

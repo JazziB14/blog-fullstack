@@ -6,8 +6,8 @@ const formEl = document.querySelector('#add-post')
 
 getPosts()
     .then(data => {
-        console.log(data)
-        data.forEach(item => console.log(item))
+        // console.log(data)
+        // data.forEach(item => console.log(item))
         data.forEach(item => showPostsWebView(item))
 
     })
