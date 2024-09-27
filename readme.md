@@ -40,8 +40,10 @@ graph TD
 - [x] All readers to see all posts
 - [x] All users to add a new post - (TODO v1)
 - [ ] All users to delete a post
-    - [ ] When hits "delete" button from each post (frontend)
+    - [x] When hits "delete" button from each post (frontend)
     - [ ] remove the post from supabase (backend)
+    -  [x] **Minimum Viable Solution**, MVS (i.e.: the simplest "correct" thing that solves the problem)  
+        - [ ] Iterate on our MVS, and make it work for real
     - [ ] refresh the page (frontend)
   
   
