@@ -27,7 +27,6 @@ export async function getPosts() {
  */
 export async function deletePost(id){
     try {
-        // console.log(`deleting posting id ${id}`)
         const response = await supabase
           .from('f24_postsTable')
           .delete()
