@@ -24,7 +24,7 @@ function showPostsWebView(item = { }) {
                         <p>${item['content']}</p>
                         <div class="card-actions justify-end">
                             <button class="btn btn-primary">Read More</button>
-                           
+                            <button class="btn btn-error">Delete</button>
                         </div>
                     </div>
                 </div>
