@@ -24,11 +24,27 @@ export async function getPosts() {
 /**
  * Deletes a post by its ID
  * @param id
- * @returns {string}
  */
-export function deletePost(id){
+export async function deletePost(id){
+    try {
+        // console.log(`deleting posting id ${id}`)
+        const response = await supabase
+          .from('f24_postsTable')
+          .delete()
+          .eq('id', id)
 
-return `deleting post with ${id}`
+        // return response
+        // {error: null, data: null, count: null, status: 204, statusText: ''}
+        // console.log(response)
+        if(response.error) {
+            return{error: response.error, statusText: null }
+        }
+
+        return {error: null, statusText: `${id} successfully deleted` }
+    } catch (e) {
+        console.log(`There was an error: ${e.message}`)
+    }
+// return `deleting post with ${id}`
 }
 
 

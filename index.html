@@ -27,10 +27,21 @@
 
         if (confirmDelete === "y") {
             // do the delete stuff
-            console.log(deletePost(postId))
+
+            // deletePost(postId)
+            deletePost(postId)
+                .then(response => {
+
+                   if (!response.error){
+                       alert(response.statusText)
+                       window.location.reload()
+                   } else {
+                       alert(`There was an ERROR!!!! Please try later`)
+                   }
+                })
 
             alert(`Post #${postId} is now deleted`)
-            window.location.reload()
+            // window.location.reload()
         } else {
             alert("OK. Delete canceled")
         }
