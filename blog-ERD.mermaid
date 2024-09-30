@@ -12,7 +12,9 @@ erDiagram
         integer user_id FK
         string title
         text content
+        integer category_id FK
         string created_at
+        boolean is_published
     }
 
     COMMENTS {
@@ -26,16 +28,11 @@ erDiagram
     CATEGORIES {
         integer id PK
         string name
-        string created_at
+        string description
     }
 
-    POSTS_CATEGORIES {
-        integer post_id FK
-        integer category_id FK
-    }
 
-    USERS ||--o{ POSTS : "creates"
-    USERS ||--o{ COMMENTS : "writes"
-    POSTS ||--o{ COMMENTS : "has"
-    POSTS ||--o{ POSTS_CATEGORIES : "belongs to"
-    CATEGORIES ||--o{ POSTS_CATEGORIES : "contains"
+    USERS ||--o{ POSTS : "has many"
+    USERS ||--o{ COMMENTS : "has many"
+    POSTS ||--o{ COMMENTS : "has many"
+    POSTS ||--o| CATEGORIES : "belongs to"
