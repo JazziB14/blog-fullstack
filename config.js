@@ -1,4 +1,6 @@
-import { createClient } from '@supabase/supabase-js'
+// import {createClient} from './node_modules/@supabase/supabase-js/dist/module/index.js'
+//
+import {createClient} from "@supabase/supabase-js";
 
 // Create a single supabase client for interacting with your database
 const supabaseUrl = 'https://xtxwmrmjrggeughetccr.supabase.co'

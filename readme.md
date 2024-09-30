@@ -39,11 +39,21 @@ graph TD
 
 - [x] All readers to see all posts
 - [x] All users to add a new post - (TODO v1)
-- [ ] All users to delete a post
+- [x] All users to delete a post
     - [x] When hits "delete" button from each post (frontend)
-    - [ ] remove the post from supabase (backend)
+    - [x] remove the post from supabase (backend)
     -  [x] **Minimum Viable Solution**, MVS (i.e.: the simplest "correct" thing that solves the problem)  
-        - - [ ] Iterate on our MVS, and make it work for real - TODO (v2)
+        - [x] Iterate on our MVS, and make it work for real - TODO (v2)
     - [x] refresh the page (frontend)
+    - [ ] Create the Data Model for my Blog app - TODO (v3), before working on this, you should have completed: https://docs.ulem.org/doc/building-a-full-stack-blog-with-javascript-and-supabase-implementing-post-deletion-R0e7GiW7TS_
+      - [ ] Create a draft of the data model (with Ai-assistance) 
+      - [ ] Create the respective in Supabase (be sure the tables in lowercase and the columns are snake_cased)
+      - [ ]  Generate and populate your tables with your generated mock data
+      - [ ] Test and share your API (with the public link on slack)
   
-  
+I'm building a blog the backend is powered by Supabase using PostgreSQL
+
+your task is to design my data model, draw it in mermaid
+
+
+

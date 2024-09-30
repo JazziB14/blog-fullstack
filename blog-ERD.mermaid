@@ -1,0 +1,49 @@
+erDiagram
+
+USER {
+    int id PK
+    string name
+    string email
+    string password_hash
+    datetime created_at
+}
+
+CATEGORY {
+    int id PK
+    string name
+    datetime created_at
+}
+
+POST {
+    int id PK
+    string title
+    text content
+    int user_id FK
+    int category_id FK
+    datetime created_at
+}
+
+COMMENT {
+    int id PK
+    string content
+    int post_id FK
+    int user_id FK
+    datetime created_at
+}
+
+TAG {
+    int id PK
+    string name
+}
+
+POST_TAG {
+    int post_id PK FK
+    int tag_id PK FK
+}
+
+USER ||--o{ POST : "writes"
+CATEGORY ||--o{ POST : "contains"
+POST ||--o{ COMMENT : "receives"
+USER ||--o{ COMMENT : "writes"
+POST ||--o{ POST_TAG : "tagged with"
+TAG ||--o{ POST_TAG : "tags"
