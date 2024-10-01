@@ -7,7 +7,7 @@ import supabase from "./config.js";
 export async function getPosts() {
 
     let {data, error} = await supabase
-        .from('f24_postsTable')
+        .from('posts')
         .select('*')
 
     return data;
@@ -28,7 +28,7 @@ export async function getPosts() {
 export async function deletePost(id){
     try {
         const response = await supabase
-          .from('f24_postsTable')
+          .from('posts')
           .delete()
           .eq('id', id)
 
@@ -61,7 +61,7 @@ export async function addPost(newPost = {}) {
     try {
         // Insert the new post into the "f24_postsTable" table
         const {data, error} = await supabase
-        .from('f24_postsTable')
+        .from('posts')
         .insert(newPost);  // Supabase expects an array of objects
         console.log(newPost)
 

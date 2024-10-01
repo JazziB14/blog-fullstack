@@ -45,11 +45,11 @@ graph TD
     -  [x] **Minimum Viable Solution**, MVS (i.e.: the simplest "correct" thing that solves the problem)  
         - [x] Iterate on our MVS, and make it work for real - TODO (v2)
     - [x] refresh the page (frontend)
-    - [ ] Create the Data Model for my Blog app - TODO (v3), before working on this, you should have completed: https://docs.ulem.org/doc/building-a-full-stack-blog-with-javascript-and-supabase-implementing-post-deletion-R0e7GiW7TS_
-      - [ ] Create a draft of the data model (with Ai-assistance) 
-      - [ ] Create the respective in Supabase (be sure the tables in lowercase and the columns are snake_cased)
-      - [ ]  Generate and populate your tables with your generated mock data
-      - [ ] Test and share your API (with the public link on slack)
+    - [x] Create the Data Model for my Blog app - TODO (v3), before working on this, you should have completed: https://docs.ulem.org/doc/building-a-full-stack-blog-with-javascript-and-supabase-implementing-post-deletion-R0e7GiW7TS_
+      - [x] Create a draft of the data model (with Ai-assistance) 
+      - [x] Create the respective in Supabase (be sure the tables in lowercase and the columns are snake_cased)
+      - [x]  Generate and populate your tables with your generated mock data
+      - [x] Test and share your API (with the public link on slack)
   
 I'm building a blog the backend is powered by Supabase using PostgreSQL
 

@@ -3,7 +3,7 @@ erDiagram
         integer id PK
         string username
         string email
-        string password
+        string password_hash
         string created_at
     }
 
@@ -16,7 +16,7 @@ erDiagram
         string created_at
         boolean is_published
     }
-
+,
     COMMENTS {
         integer id PK
         integer user_id FK
